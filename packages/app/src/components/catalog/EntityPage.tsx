@@ -32,6 +32,7 @@ import {
   isGithubActionsAvailable,
   EntityGithubActionsContent,
 } from '@backstage/plugin-github-actions';
+import { EntityGithubDeploymentsCard } from '@backstage/plugin-github-deployments';
 import {
   EntityUserProfileCard,
   EntityGroupProfileCard,
@@ -57,6 +58,7 @@ import {
 
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
+import { PluginTeste01AlxPage } from '@internal/plugin-plugin-teste01-alx';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -137,6 +139,10 @@ const overviewContent = (
     <Grid item md={8} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
     </Grid>
+
+    <Grid item xs={12} sm={6} md={12}>
+      <EntityGithubDeploymentsCard />
+    </Grid>
   </Grid>
 );
 
@@ -148,6 +154,10 @@ const serviceEntityPage = (
 
     <EntityLayout.Route path="/ci-cd" title="CI/CD">
       {cicdContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="/github-actions" title="GitHub Actions">
+      <EntityGithubActionsContent />
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/api" title="API">
@@ -351,6 +361,9 @@ const systemPage = (
         ]}
         unidirectional={false}
       />
+    </EntityLayout.Route>
+    <EntityLayout.Route path='/plugin-teste01-alx' title='Plugin de teste'>
+      <PluginTeste01AlxPage />
     </EntityLayout.Route>
   </EntityLayout>
 );

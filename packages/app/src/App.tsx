@@ -34,6 +34,7 @@ import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
+import { PluginTeste01AlxPage } from '@internal/plugin-plugin-teste01-alx';
 
 
 const gitHubProvider: SignInProviderConfig = {
@@ -111,6 +112,7 @@ const routes = (
     </Route>
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
+    <Route path="/plugin-teste01-alx" element={<PluginTeste01AlxPage />} />
   </FlatRoutes>
 );
 

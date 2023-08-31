@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: core-data
+spec:
+  targets:
+    - ../domain/domain.yaml
+    - ../system/system.yaml

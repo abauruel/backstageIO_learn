@@ -2,7 +2,15 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ${{ values.name | dump }}
+  links:
+    - title: ${{ values.name }}
+      url: ${{ values.repoUrl }}
+      icon: dashboard
+  annotations:
+    backstage.io/techdocs-ref: dir:.
 spec:
-  type: service
+  type: website
   owner: user:guest
   lifecycle: experimental
+
+
