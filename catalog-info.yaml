@@ -8,5 +8,5 @@ metadata:
     - website
 spec:
   type: service
-  owner: abauruel
   lifecycle: production
+  owner: BackstageWorkspace
